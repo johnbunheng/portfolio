@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa6";
+import { GoX } from "react-icons/go";
+
 const Navbar = () => {
   const [show,setShow] = useState(false)
       const handleshow = () =>{
@@ -11,15 +13,48 @@ const Navbar = () => {
         }
       }
   return (
-    <nav className="flex justify-between justify-items-center w-4/5 m-auto py-5 text-white">
+    <nav className="flex justify-between justify-items-center sm:w-4/5 m-auto py-5 sm:shadow-none shadow-lg shadow-slate-500 text-white">
       <div className="flex gap-2">
         <FaCode className="mt-1 text-2xl text-blue-700 animate-spin transition-all" />
         <h3 className="text-2xl font-semibold"> JB Designer</h3>
       </div>
+
+       <FaBarsStaggered className="sm:hidden font-semibold mx-5 mt-2 text-2xl cursor-pointer" onClick={handleshow}/>
+       
       {show &&(
-          <div className="flex items-center text-center">
+        <div className="w-40 right-0 h-60 mx-2 items-center text-center fixed duration-300">
+        
         <ul
-          className=" sm:flex w-96 justify-between hidden"
+          className="sm:flex justify-between p-2 -top-4 rounded-lg bg-slate-300 text-sky-900"
+        >
+          <GoX onClick={handleshow} className="text-4xl font-semibold justify-self-end -top-5"/>
+          <li>
+            <a href="./home.jsx" className=" hover:underline">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./about.jsx" className=" hover:underline">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="./project.jsx" className=" hover:underline">
+              Project
+            </a>
+          </li>
+          <li>
+            <a href="./contact.jsx" className=" hover:underline">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+      )}
+      <div className="sm:w-96 hidden sm:block w-40 right-0 mx-2 items-center text-center ">
+        
+        <ul
+          className="sm:flex justify-between p-2 -top-4 rounded-lg "
         >
           <li>
             <a href="./home.jsx" className=" hover:underline">
@@ -47,9 +82,7 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <FaBarsStaggered className="sm:hidden text-2xl" onClick={handleshow}/>
       </div>
-      )}
     </nav>
   );
 };

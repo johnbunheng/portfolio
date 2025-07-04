@@ -4,12 +4,13 @@ import img3 from "../src/img/Watch.png"
 import img4 from "../src/img/shapoo.png"
 import img5 from "../src/img/shirt.png"
 import img6 from "../src/img/9vecheka.png"
+import { GrCube } from "react-icons/gr";
 const ProjectCard = ({ title, img }) => (
         <div className="m-auto mt-5">
-            <div className="w-96 p-6 bg-blue-950 rounded-lg ">
-                <h2 className="text-xl text-yellow-500 font-bold py-2 px-4 underline">{title}</h2>
+            <div className="w-[22rem] h-[450px] p-6 bg-blue-950 rounded-lg ">
+                <h2 className="text-xl text-yellow-500 font-bold  px-4 underline">{title}</h2>
                 <img src={img}alt="" 
-                className="w-[90%] m-auto"/>
+                className="w-[90%] my-2 h-[90%] m-auto"/>
                 
             </div>
         </div>    
@@ -44,7 +45,7 @@ const Projects = () => {
 
     return (
             <div className="container ">
-                <h2 className="text-3xl font-bold text-center mb-10 text-white">My Projects</h2>
+                <h2 className="text-3xl font-bold text-center mb-10 text-yellow-500">My Projects <GrCube className="inline-block text-blue-700 animate-spin"/></h2>
                 <div className="grid grid-cols-1 md:grid-cols-3">
                     {projects.map((project, index) => (
                         <ProjectCard key={index} {...project} />
