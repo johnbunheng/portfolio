@@ -1,15 +1,25 @@
+import { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa6";
 const Navbar = () => {
+  const [show,setShow] = useState(false)
+      const handleshow = () =>{
+        if (show === true){
+          setShow(false)
+        }else{
+          setShow(true)
+        }
+      }
   return (
     <nav className="flex justify-between justify-items-center w-4/5 m-auto py-5 text-white">
       <div className="flex gap-2">
         <FaCode className="mt-1 text-2xl text-blue-700 animate-spin transition-all" />
-        <h3 className="text-2xl font-semibold"> JB Developer</h3>
+        <h3 className="text-2xl font-semibold"> JB Designer</h3>
       </div>
-      <div className="flex items-center text-center">
+      {show &&(
+          <div className="flex items-center text-center">
         <ul
-          className=" sm:flex w-96 justify-between hidden "
+          className=" sm:flex w-96 justify-between hidden"
         >
           <li>
             <a href="./home.jsx" className=" hover:underline">
@@ -37,8 +47,9 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <FaBarsStaggered className="sm:hidden text-2xl" />
+        <FaBarsStaggered className="sm:hidden text-2xl" onClick={handleshow}/>
       </div>
+      )}
     </nav>
   );
 };

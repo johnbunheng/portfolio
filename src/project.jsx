@@ -1,31 +1,44 @@
-const ProjectCard = ({ title, description, link }) => (
+import img1 from "../src/img/Form.png"
+import img2 from "../src/img/passapp.png"
+import img3 from "../src/img/Watch.png"
+import img4 from "../src/img/shapoo.png"
+import img5 from "../src/img/shirt.png"
+import img6 from "../src/img/9vecheka.png"
+const ProjectCard = ({ title, img }) => (
         <div className="m-auto mt-5">
-            <div className="w-80 p-6 bg-blue-950 rounded-lg ">
-                <h2 className="text-xl text-white font-bold mb-2 ">{title}</h2>
-                <p className="text-white mb-4">{description}</p>
-                <a href={link} className="text-white p-2 rounded bg-blue-700 hover:underline">View Project</a>
+            <div className="w-96 p-6 bg-blue-950 rounded-lg ">
+                <h2 className="text-xl text-yellow-500 font-bold py-2 px-4 underline">{title}</h2>
+                <img src={img}alt="" 
+                className="w-[90%] m-auto"/>
+                
             </div>
-        </div>  
-            
-
-   
+        </div>    
 );
 const Projects = () => {
     const projects = [
         {
-            title: "ABA clone",
-            description: "A full-stack online store with payment integration.",
-            link: "https://johnbunheng.github.io/aba2/"
+            title: "Poster Form",
+            img: img1
         },
         {
-            title: "Computer shop",
-            description: "A productivity app to manage tasks and deadlines.",
-            link: "https://johnbunheng.github.io/csshop/"
+            title: "Poster PassApp",
+            img: img2
         },
         {
-            title: "Portfolio Website",
-            description: "This very portfolio built with React and Tailwind CSS.",
-            link: ""
+            title: "Poster Watch",
+            img: img3
+        },
+         {
+            title: "Poster Shapoo",
+            img: img4
+        },
+         {
+            title: "Poster Shirt",
+            img: img5
+        },
+         {
+            title: "Poster ៩​ វិច្ឆិកា",
+            img: img6
         }
     ];
 

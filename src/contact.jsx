@@ -1,3 +1,5 @@
+import About from "./about";
+
 const Contact = () => (
     <section className="mt-20 sm:mt-0 sm:right-36">
         <div className="container mx-auto text-center sm:text-start">
@@ -10,6 +12,7 @@ const Contact = () => (
                 <a href="https://github.com" className="text-blue-500 hover:underline">GitHub</a>
             </div>
         </div>
+        <About/>
     </section>
 );
 export default Contact

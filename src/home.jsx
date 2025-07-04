@@ -5,9 +5,9 @@ import Navbar from './navbar';
 import Projects from './project';
 const Home = () => {
     return (
-        <div className="container w-full  bg-slate-950">
+        <div className="container w-full bg-slate-950">
             <Navbar/>
-            <div className='container  my-10 justify-items-center sm:px-40 sm:flex justify-between '>
+            <div className='container my-4 justify-items-center sm:px-40 sm:flex justify-between '>
                 <Hero/>
                 <Contact/>
             </div>
