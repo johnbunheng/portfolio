@@ -4,14 +4,14 @@ import { FaCode } from "react-icons/fa6";
 import { GoX } from "react-icons/go";
 
 const Navbar = () => {
-  const [show,setShow] = useState(false)
-      const handleshow = () =>{
-        if (show === true){
-          setShow(false)
-        }else{
-          setShow(true)
-        }
-      }
+  const [show, setShow] = useState(false);
+  const handleshow = () => {
+    if (show === true) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  };
   return (
     <nav className="flex justify-between justify-items-center sm:w-4/5 m-auto py-5 sm:shadow-none shadow-lg shadow-slate-500 text-white">
       <div className="flex gap-2">
@@ -19,43 +19,43 @@ const Navbar = () => {
         <h3 className="text-2xl font-semibold"> JB Designer</h3>
       </div>
 
-       <FaBarsStaggered className="sm:hidden font-semibold mx-5 mt-2 text-2xl cursor-pointer" onClick={handleshow}/>
-       
-      {show &&(
-        <div className="w-40 right-0 h-60 mx-2 items-center text-center fixed duration-300">
-        
-        <ul
-          className="sm:flex justify-between p-2 -top-4 rounded-lg bg-slate-300 text-sky-900"
-        >
-          <GoX onClick={handleshow} className="text-4xl font-semibold justify-self-end -top-5"/>
-          <li>
-            <a href="./home.jsx" className=" hover:underline">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="./about.jsx" className=" hover:underline">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="./project.jsx" className=" hover:underline">
-              Project
-            </a>
-          </li>
-          <li>
-            <a href="./contact.jsx" className=" hover:underline">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
+      <FaBarsStaggered
+        className="sm:hidden font-semibold mx-5 mt-2 text-2xl cursor-pointer"
+        onClick={handleshow}
+      />
+
+      {show && (
+        <div className="right-0 mx-2 items-center text-center fixed duration-300">
+          <ul className="w-52 space-y-4 h-72 sm:flex justify-between p-2 -top-5 rounded-lg bg-slate-700 text-white">
+            <GoX
+              onClick={handleshow}
+              className="text-4xl font-medium justify-self-end -top-4"
+            />
+            <li>
+              <a href="./home.jsx" className=" hover:underline">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="./about.jsx" className=" hover:underline">
+                About Me
+              </a>
+            </li>
+            <li>
+              <a href="./project.jsx" className=" hover:underline">
+                Project
+              </a>
+            </li>
+            <li>
+              <a href="./contact.jsx" className=" hover:underline">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
       )}
       <div className="sm:w-96 hidden sm:block w-40 right-0 mx-2 items-center text-center ">
-        
-        <ul
-          className="sm:flex justify-between p-2 -top-4 rounded-lg "
-        >
+        <ul className="sm:flex justify-between p-2 -top-4 rounded-lg ">
           <li>
             <a href="./home.jsx" className=" hover:underline">
               Home

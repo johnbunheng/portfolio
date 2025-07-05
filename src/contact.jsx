@@ -2,8 +2,8 @@ import About from "./about";
 
 const Contact = () => (
     <section className="mt-20 sm:mt-0 sm:right-36">
-        <div className="container mx-auto text-center sm:text-start">
-            <h2 className="text-xl text-white items-center font-bold mb-6">Get in Touch</h2>
+        <div className="mx-auto text-start sm:text-start">
+            <h2 className="text-xl text-white font-bold mb-6">Get in Touch</h2>
             <hr className="w-16 border-1 border-blue-700" />
             <p className=" text-white mb-6 mt-6">Feel free to reach out for collaborations <br /> or inquiries!</p>
             <div className="space-x-4">
