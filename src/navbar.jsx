@@ -14,7 +14,7 @@ const Navbar = () => {
   };
   return (
     <nav className="flex justify-between justify-items-center sm:w-4/5 m-auto py-5 sm:shadow-none shadow-lg shadow-slate-500 text-white">
-      <div className="flex gap-2">
+      <div className="flex gap-2 mx-2">
         <FaCode className="mt-1 text-2xl text-blue-700 animate-spin transition-all" />
         <h3 className="text-2xl font-semibold"> JB Designer</h3>
       </div>
@@ -26,10 +26,10 @@ const Navbar = () => {
 
       {show && (
         <div className="right-0 mx-2 items-center text-center fixed duration-300">
-          <ul className="w-52 space-y-4 h-72 sm:flex justify-between p-2 -top-5 rounded-lg bg-slate-700 text-white">
+          <ul className=" relative w-52 space-y-4 h-72 sm:flex justify-between p-2 rounded-lg bg-slate-700 text-white">
             <GoX
               onClick={handleshow}
-              className="text-4xl font-medium justify-self-end -top-4"
+              className="text-4xl absolute right-0 font-medium mx-2"
             />
             <li>
               <a href="./home.jsx" className=" hover:underline">

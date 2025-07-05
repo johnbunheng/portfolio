@@ -7,7 +7,7 @@ import img6 from "../src/img/9vecheka.png"
 import { GrCube } from "react-icons/gr";
 const ProjectCard = ({ title, img }) => (
         <div className="m-auto mt-5">
-            <div className="w-[22rem] h-[450px] p-6 bg-blue-950 rounded-lg ">
+            <div className="w-[24rem] h-[450px] p-6 bg-blue-950 rounded-lg ">
                 <h2 className="text-xl text-yellow-500 font-bold  px-4 underline">{title}</h2>
                 <img src={img}alt="" 
                 className="w-[90%] my-2 h-[90%] m-auto"/>
