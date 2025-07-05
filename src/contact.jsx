@@ -1,7 +1,7 @@
 import About from "./about";
 
 const Contact = () => (
-    <section className="mt-20 justify-items-center ">
+    <section className="mt-20  ">
         <div className="mx-auto text-start sm:text-start">
             <h2 className="text-xl text-white font-bold mb-6">Get in Touch</h2>
             <hr className="w-16 border-1 border-blue-700" />
